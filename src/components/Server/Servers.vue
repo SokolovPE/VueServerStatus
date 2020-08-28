@@ -26,14 +26,6 @@ export default {
             selectedServer: null
         };
     },
-    methods: {
-        changeSelectedServer(serverId) {
-            this.selectedServer = this.servers.filter(function(srv) {
-                return srv.id == serverId;
-            })[0];
-            eventBus.changeSelectedServer(this.selectedServer);
-        }
-    },
     components: {
         'server-item': ServerItem
     },
