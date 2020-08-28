@@ -23,15 +23,13 @@ export default {
                 { id: 3, status: 'Unknown' },
                 { id: 4, status: 'Normal' }
             ],
-            selectedServer: null
         };
     },
     components: {
         'server-item': ServerItem
     },
     mounted() {
-        this.selectedServer = this.servers[0];
-        eventBus.changeSelectedServer(this.selectedServer);
+        eventBus.changeSelectedServer(this.servers[0]);
     }
 };
 </script>
